@@ -1,0 +1,42 @@
+<div class="row">
+   <div class="container" >
+     <div class="card-group" >
+       <div class="col-md-12" >
+         <div class="recipe">
+           <div class="recipe-img-container">
+             <img class="recipe-img" [src]="recipe.imagePath" [alt]="recipe.name">
+           </div>
+           <div class="recipe-body-container">
+           <div class="recipe-body">
+             <h2 class="recipe-title">{{recipe.name}}</h2>
+             <p class="recipe-text">{{recipe.description}}</p>
+           </div>
+         </div>
+            <div class="recipe-price-body">
+              <h5 class="recipe-price-title">{{recipe.price | currency:"USD"}}</h5>
+            </div>
+            <br />
+            <ul class="list-group" >
+             <li class="list-group-item align-items-center" *ngFor="let ingredient of recipe.ingredients">
+               <span class="badge badge-primary badge-pill">{{ingredient.amount }}</span>
+              {{ingredient.name}}
+             </li>
+           </ul>
+           <br />
+            <div class="btn-group"  [ngClass]="{show : expandValue==true}" role="group">
+               <button id="btnGroupDrop1" type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" (click)="expand()" >
+                 Mange Recipe
+               </button>
+               <div class="dropdown-menu" [ngClass]="{show : expandValue==true}" aria-labelledby="btnGroupDrop1">
+                 <a class="dropdown-item" (click)="AddToIngredient(recipe.ingredients)">To Shopping List</a>
+                 <a class="dropdown-item" (click)="onEditRecipe()">Edit Recipe</a>
+                  <a class="dropdown-item" (click)="onDeleteRecipe()">Delete Recipe</a>
+               </div>
+             </div>
+
+       </div>
+       <br />
+       </div>
+     </div>
+   </div>
+</div>

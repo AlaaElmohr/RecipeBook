@@ -1,0 +1,17 @@
+<div class="row">
+   <div class="container">
+     <div class="col-md-12">
+       <app-shopping-edit></app-shopping-edit>
+       <hr />
+       <ul class="list-group" *ngFor="let ingredient of ingredients;let i =index">
+
+        <li class="list-group-item align-items-center" (click)="sendIngrediant(i)">
+          <span class="badge badge-primary badge-pill">{{ingredient.amount }}</span>
+         {{ingredient.name}}
+        </li>
+
+      </ul>
+     </div>
+
+   </div>
+</div>

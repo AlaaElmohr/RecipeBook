@@ -1,0 +1,17 @@
+.form-control{
+  background-color: transparent;
+  color: #fff;
+    font-family:Quick
+}
+label{
+  color: #fff;
+  font-family: 'Yeseva One', cursive;
+}
+.btn-primary{
+  background-color: #cc5456;
+    border-color: #cc5456;
+  margin-right: 20px
+  }
+  form{
+    overflow-x: hidden;
+  }

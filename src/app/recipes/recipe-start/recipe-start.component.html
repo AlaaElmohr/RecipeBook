@@ -1,0 +1,33 @@
+<div class="row">
+   <div class="container" >
+     <div class="card-group" >
+       <div class="col-md-12" >
+         <div class="recipe">
+           <div class="recipe-img-container">
+             <img class="recipe-img" [src]="recipe.imagePath" [alt]="recipe.name">
+           </div>
+           <div class="recipe-body-container">
+           <div class="recipe-body">
+             <h2 class="recipe-title">{{recipe.name}}</h2>
+             <p class="recipe-text">{{recipe.description}}</p>
+           </div>
+         </div>
+            <div class="recipe-price-body">
+              <h5 class="recipe-price-title">{{recipe.price | currency:"USD"}}</h5>
+            </div>
+            <br />
+            <ul class="list-group" >
+             <li class="list-group-item align-items-center" *ngFor="let ingredient of recipe.ingredients">
+               <span class="badge badge-primary badge-pill">{{ingredient.amount }}</span>
+              {{ingredient.name}}
+             </li>
+           </ul>
+           <br />
+  
+
+       </div>
+       <br />
+       </div>
+     </div>
+   </div>
+</div>

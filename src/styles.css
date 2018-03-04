@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+  background: url('./assets/images/body-bg.jpg');
+  background-size: cover;
+}
+p{
+  color:white
+}
+.chalkFont{
+  font-family: 'Fredericka the Great', cursive;
+}
+.txt-light{
+  color:#fff;
+}
+.f-80{
+  font-size: 100px
+}
+.p-t-100{
+  padding-top: 100px
+}
+.p-b-50{
+  padding-bottom: 50px
+}
+.btn-primary{
+  background-color: #cc5456;
+    border-color: #cc5456;}

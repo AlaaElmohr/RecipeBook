@@ -1,0 +1,45 @@
+<form  [formGroup]="recipeForm" (ngSubmit)="submit()" >
+
+  <div class="form-group">
+    <label for="recipe-name" >Recipe Name</label>
+    <input type="text" class="form-control"  name="name" formControlName="name">
+  </div>
+  <div class="form-group">
+    <label for="recipe-desc">Recipe Description</label>
+    <textarea type="text" class="form-control"  name="description" rows="6" formControlName="description"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="recipe-url">Recipe Url</label>
+    <input type="text" class="form-control"name="imagePath" formControlName="imagePath" #imagePath>
+  </div>
+    <img [src]="imagePath.value" *ngIf="recipeForm.get('imagePath')" class="img-responsive img-1" />
+      <label for="recipe-price">Recipe Price</label>
+  <div class="input-group mb-2">
+      <input type="text" class="form-control p-t-10" name="price" formControlName="price">
+      <div class="input-group-prepend">
+        <div class="input-group-text">$</div>
+      </div>
+    </div>
+    <div formArrayName="ingredients">
+      <div class="row" *ngFor="let recipeIngredient of  recipeForm.get('ingredients').controls;let i =index" [formGroupName]="i">
+         <div class="col-md-7">
+           <div class="form-group">
+             <label for="recipe-url">Ingredient Name</label>
+             <input type="text" class="form-control" name="name" formControlName="name">
+           </div>
+         </div>
+         <div class="col-md-5">
+           <div class="form-group">
+             <label for="recipe-url">Ingredient Amount</label>
+             <input type="text" class="form-control"  name="amount" formControlName="amount">
+           </div>
+         </div>
+      </div>
+    </div>
+    <button type="button" class="btn btn-success" (click)="addIngredient()">Add Ingredient</button>
+
+<div class="row">
+    <button type="submit" class="btn btn-primary">{{editModeAction}}</button>
+      <button type="button" class="btn btn-primary" (click)="cancel()">Cancel</button>
+</div>
+</form>

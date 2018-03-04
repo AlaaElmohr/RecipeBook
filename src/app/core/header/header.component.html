@@ -1,0 +1,32 @@
+
+<div class="text-center backgroud-header">
+  <div class="cover-container d-flex h-100 mx-auto flex-column">
+    <header class="masthead">
+      <div class="inner">
+        <img src="./../../assets/images/logo.png" />
+        <nav class="nav nav-masthead justify-content-center">
+          <a class="nav-link" routerLink="/shopping-list" routerLinkActive="active">Shopping List</a>
+        <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+          <a class="nav-link" routerLink="/recipes" routerLinkActive="active" >Recipe Book</a>
+          <a class="nav-link"  routerLink="/signUp" routerLinkActive="active" >Register</a>
+          <a class="nav-link"  routerLink="/signIn" routerLinkActive="active" >Login</a>
+
+          <li class="nav-item dropdown"  [ngClass]="{show : expandValue==true}" >
+             <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" (click)="expand()">
+               Manage
+             </a>
+             <div class="dropdown-menu" aria-labelledby="navbarDropdown" [ngClass]="{show : expandValue==true}" *ngIf="!authService.isAuth()">
+               <a class="dropdown-item" (click)="saveData()">Save Data</a>
+               <a class="dropdown-item" (click)="fetchData()">Fetch Data</a>
+               <a class="dropdown-item" (click)="logOut()">Log Out</a>
+
+             </div>
+           </li>
+        </nav>
+      </div>
+    </header>
+    <main role="main" class="inner cover">
+      <h1 class="cover-heading"> Welcome <br /> To <br /> {{ header }}</h1>
+    </main>
+  </div>
+</div>

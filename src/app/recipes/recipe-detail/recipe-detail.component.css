@@ -1,0 +1,82 @@
+.card p{
+  color:#000
+}
+.recipe{
+  margin-top: 20px;
+}
+.recipe-img-container {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    background-size: cover;
+    justify-content: center;
+}
+.recipe-body-container{
+  z-index: 99999999;
+  margin-top: -10px;
+  display: flex;
+  flex: 1;
+}
+.recipe-body{
+  background-color:rgba(255,255,255,.95);
+  width:70%;
+  margin: 0 auto;
+  padding:40px
+}
+.recipe-img{
+  background-size: cover;
+  height:190px;
+  width:369px;
+}
+.recipe-title{
+color:#cc5456;
+font-family: 'Yeseva One', cursive;
+}
+.recipe-text{
+  margin-top: 20px;
+  color:#a5a19d;
+  font-family: Quicksand;
+}
+.recipe-price-body{
+  background-color: rgba(190,33,39,0.9) !important;
+  height: 45px;
+  width: 80px;
+  padding: 10px;
+  margin-top: -30px;
+position: absolute;
+z-index:2;
+margin-left: 70%;
+}
+.recipe-price-title{
+  color:#fff;
+  font-family: 'Yeseva One', cursive;
+}
+.badge-primary{
+  background-color: #cc5456;
+}
+.list-group-item{
+  background-color: transparent;
+  border: 1px solid rgba(225, 225, 225, 0.7);
+  color:#fff;
+  margin-top: 10px;
+  font-family: 'Fredericka the Great', cursive;
+}
+.dropdown-menu{
+  background-color: transparent;
+  border:1px solid rgba(225, 225, 225, 0.7);
+
+}
+
+.dropdown-item{
+  color:#fff !important;
+    font-family: 'Yeseva One', cursive;
+}
+.btn{
+      font-family: 'Yeseva One', cursive;
+}
+.dropdown-item:hover{
+    background-color: #cc5456;
+    color:#fff
+}

@@ -1,0 +1,41 @@
+.card p{
+  color:#000
+}
+.recipe{
+  margin-top: 20px;
+}
+
+.recipe-body-container{
+  z-index: 99999999;
+  margin-top: -10px;
+  display: flex;
+  flex: 1;
+}
+.recipe-body{
+  background-color:rgba(255,255,255,.95);
+  width:100%;
+  margin: 0 auto;
+  padding:40px
+}
+.recipe-body .btn-primary{
+  background-color: #cc5456;
+    border-color: #cc5456;
+    font-family: 'Yeseva One', cursive;
+    float: right;
+}
+.recipe-title{
+color:#cc5456;
+font-family: 'Yeseva One', cursive;
+}
+.recipe-text{
+  margin-top: 20px;
+  color:#a5a19d;
+  font-family: Quicksand;
+}
+.btn-primary{
+  background-color: #cc5456;
+    border-color: #cc5456;
+margin-left:15px;
+color:#fff !important;
+    font-family: 'Yeseva One', cursive;
+  }

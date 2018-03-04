@@ -1,0 +1,11 @@
+    <a class="btn btn-primary" (click)="onNewRecipe()">New Recipe</a>
+<div class="row">
+   <div class="container" >
+     <div class="card-group" >
+       <div class="col-md-9" >
+        <app-recipe-item *ngFor="let ElRecipe of recipes;let i =index" [recipe]="ElRecipe" [index]="i"></app-recipe-item>
+       <br />
+       </div>
+     </div>
+   </div>
+</div>
